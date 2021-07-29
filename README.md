@@ -1,6 +1,8 @@
 # Сайт для мониторинга статуса скважин
 
-Это личный проект, сделан студентом  <a href="https://github.com/BaisangurIdigov"><img alt="Baisangur" src="https://img.shields.io/badge/-Baisangur_Idigov-black?style=for-the-badge&logo=github&logoColor=white" /></a>
+Это личный проект, сделан студентом:  
+
+<a href="https://github.com/BaisangurIdigov"><img alt="Baisangur" src="https://img.shields.io/badge/-Baisangur_Idigov-black?style=for-the-badge&logo=github&logoColor=white" /></a>
 
 ## Функционал
 
