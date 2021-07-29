@@ -1,0 +1,107 @@
+body {
+  font-family: "Prompt", sans-serif;
+  margin-top: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+a.selected {
+  color: orange;
+  font-size: 30px;
+}
+
+.menuItem {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.filter {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.input {
+  width: 100%;
+}
+
+.avatarImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.margin {
+  margin-top: 50px;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+}
+
+.status {
+  width: 100px;
+  border-radius: 10px;
+  margin-left: 50%;
+  height: 30px;
+}
+
+.AddIcon {
+  margin-top: 50px;
+  margin-left: 50%;
+}
+
+.noteStatus {
+  text-align: center;
+  border-radius: 10px;
+  width: 120px;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.noteBox {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.noteInput {
+  width: 70%;
+}
+
+.noteButton {
+  width: 10%;
+  height: 50px;
+}
+
+.formControl {
+  width: 20%;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+.modalContent {
+  padding: 300px;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+}
