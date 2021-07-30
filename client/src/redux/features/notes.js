@@ -43,7 +43,7 @@ export default function notesReduser(state = initialState, action) {
 export const loadNotes = (id) => {
   return async (dispatch) => {
     dispatch({ type: "notes/load/pending" });
-    const response = await fetch(`http://localhost:9000/notes/${id}`);
+    const response = await fetch(`notes/${id}`);
     const json = await response.json();
 
     dispatch({ type: "notes/load/fulfilled", payload: json });
@@ -52,7 +52,7 @@ export const loadNotes = (id) => {
 
 export const postNotes = ({ rig, text, status }) => {
   return async (dispatch) => {
-    await fetch("http://localhost:9000/notes", {
+    await fetch("/notes", {
       method: "POST",
       body: JSON.stringify({ rig, text, status }),
       headers: {
@@ -66,7 +66,7 @@ export const postNotes = ({ rig, text, status }) => {
 
 export const patchNotes = (id, data) => {
   return async (dispatch) => {
-    await fetch(`http://localhost:9000/notes/${id}`, {
+    await fetch(`/notes/${id}`, {
       method: "PATCH",
       body: JSON.stringify(data),
       headers: {
