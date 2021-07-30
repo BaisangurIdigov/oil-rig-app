@@ -42,7 +42,7 @@ export default function oilRigsReduser(state = initialState, action) {
 export const loadOilRigs = () => {
   return async (dispatch) => {
     dispatch({ type: "rigs/load/pending" });
-    const response = await fetch("http://localhost:9000/rigs");
+    const response = await fetch("/rigs");
     const json = await response.json();
 
     dispatch({ type: "rigs/load/fulfilled", payload: json });
@@ -51,7 +51,7 @@ export const loadOilRigs = () => {
 
 export const postRigs = ({ img, title }) => {
   return async (dispatch) => {
-    await fetch("http://localhost:9000/rigs", {
+    await fetch("/rigs", {
       method: "POST",
       body: JSON.stringify({ img, title }),
       headers: {

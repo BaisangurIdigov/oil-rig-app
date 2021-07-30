@@ -12,8 +12,8 @@ app.use(cors());
 app.use(morgan("tiny"));
 app.use(require("./routes/index.js"));
 
-const URL = process.env.URL
-const PORT = process.env.PORT
+const { URL } = process.env
+const { PORT } = process.env
 
 async function start() {
   try {
@@ -22,7 +22,7 @@ async function start() {
       useNewUrlParser: true,
       useFindAndModify: false,
     });
-    app.listen(process.env.PORT || PORT, () => {
+    app.listen( PORT, () => {
       console.log("server has been started...");
     });
   } catch (e) {

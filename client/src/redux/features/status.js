@@ -42,7 +42,7 @@ export default function statusReduser(state = initialState, action) {
 export const loadStatus = () => {
   return async (dispatch) => {
     dispatch({ type: "status/load/pending" });
-    const response = await fetch("http://localhost:9000/status");
+    const response = await fetch("/status");
     const json = await response.json();
 
     dispatch({ type: "status/load/fulfilled", payload: json });
