@@ -38,6 +38,13 @@ function MainAdmin({ input }) {
 
   return (
     <div>
+      <Box className="AddIcon">
+        <Fab color="primary" aria-label="add">
+          <AddIcon onClick={() => setOpened(true)} />
+        </Fab>
+        <ModalRig opened={opened} setOpened={setOpened} />
+        <ModalEditRig id={id} open={open} setOpen={setOpen} />
+      </Box>
       <TableContainer component={Paper}>
         <Table size="small" aria-label="a dense table">
           <TableHead>
@@ -72,13 +79,7 @@ function MainAdmin({ input }) {
           </TableBody>
         </Table>
       </TableContainer>
-      <Box className="AddIcon">
-        <Fab color="primary" aria-label="add">
-          <AddIcon onClick={() => setOpened(true)} />
-        </Fab>
-        <ModalRig opened={opened} setOpened={setOpened} />
-        <ModalEditRig id={id} open={open} setOpen={setOpen} />
-      </Box>
+
     </div>
   );
 }

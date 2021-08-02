@@ -51,7 +51,7 @@ export const loadStatus = () => {
 
 export const postStatus = ({ id, color, title }) => {
   return async (dispatch) => {
-    await fetch("http://localhost:9000/status", {
+    await fetch("/status", {
       method: "POST",
       body: JSON.stringify({ id, color, title }),
       headers: {
@@ -65,7 +65,7 @@ export const postStatus = ({ id, color, title }) => {
 
 export const patchStatus = (id, data) => {
   return async (dispatch) => {
-    await fetch(`http://localhost:9000/status/${id}`, {
+    await fetch(`/status/${id}`, {
       method: "PATCH",
       body: JSON.stringify(data),
       headers: {

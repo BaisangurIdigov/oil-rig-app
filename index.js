@@ -17,18 +17,18 @@ app.get("*", (req,res)=> {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 })
 
-const { URL } = process.env
-const { PORT } = process.env
+const URL = process.env.URL
+const PORT = process.env.PORT
 
 async function start() {
   try {
     await mongoose.connect(URL, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      useFindAndModify: false,
+      useFindAndModify: true,
       useCreateIndex: true
     });
-    app.listen( PORT, () => {
+    app.listen(PORT, () => {
       console.log("server has been started...");
     });
   } catch (e) {

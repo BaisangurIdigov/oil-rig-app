@@ -1,48 +1,50 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Paper } from "@material-ui/core";
+import { Box, Paper } from '@material-ui/core';
+import Search from '../body/Search';
 
-function HeaderAdmin(props) {
+function HeaderAdmin({setInput}) {
   return (
     <Paper>
       <nav className="navbar navbar-light bg-light">
-        <div className="container-fluid">
-          <h1 className="navbar-brand">Navbar</h1>
-          <div className="header">
-            <NavLink
-              className="menuItem"
-              exact
-              to="/"
-              activeClassName="selected"
-            >
-              Главная
-            </NavLink>
-            <NavLink
-              className="menuItem"
-              exact
-              to="/admin"
-              activeClassName="selected"
-            >
-              Админка
-            </NavLink>
-            <NavLink
-              className="menuItem"
-              exact
-              to="/status"
-              activeClassName="selected"
-            >
-              Статус
-            </NavLink>
-            <NavLink
-              className="menuItem"
-              exact
-              to="/about_us"
-              activeClassName="selected"
-            >
-              О нас
-            </NavLink>
-          </div>
-        </div>
+        <Box className="container-fluid">
+            <h1 className="navbar-brand">Navbar</h1>
+            <div className="header">
+              <NavLink
+                className="menuItem"
+                exact
+                to="/"
+                activeClassName="selected"
+              >
+                Главная
+              </NavLink>
+              <NavLink
+                className="menuItem"
+                exact
+                to="/admin"
+                activeClassName="selected"
+              >
+                Админка
+              </NavLink>
+              <NavLink
+                className="menuItem"
+                exact
+                to="/status"
+                activeClassName="selected"
+              >
+                Статус
+              </NavLink>
+              <NavLink
+                className="menuItem"
+                exact
+                to="/about_us"
+                activeClassName="selected"
+              >
+                О нас
+              </NavLink>
+            </div>
+            <Search setInput={setInput} />
+          </Box>
       </nav>
     </Paper>
   );

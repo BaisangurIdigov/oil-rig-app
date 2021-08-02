@@ -14,13 +14,12 @@ function App() {
   return (
     <Switch>
       <Route path="/" exact>
-        <Header />
+        <Header setInput={setInput}/>
         <Search setInput={setInput} />
         <Main input={input} />
       </Route>
       <Route path="/admin">
-        <HeaderAdmin />
-        <Search setInput={setInput} />
+        <HeaderAdmin setInput={setInput}/>
         <MainAdmin input={input} />
       </Route>
       <Route path="/status">

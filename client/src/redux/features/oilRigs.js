@@ -65,7 +65,7 @@ export const postRigs = ({ img, title }) => {
 
 export const patchRig = (id, data) => {
   return async (dispatch) => {
-    await fetch(`http://localhost:9000/rigs/${id}`, {
+    await fetch(`/rigs/${id}`, {
       method: "PATCH",
       body: JSON.stringify(data),
       headers: {
